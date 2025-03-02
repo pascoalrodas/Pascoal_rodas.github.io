@@ -1,0 +1,498 @@
+/* Reset de margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Cores principais */
+  :root {
+    --primary-color: #1a1a1a; /* Fundo escuro */
+    --highlight-color: #E93335; /* Vermelho neon */
+    --text-color: #fff; /* Texto branco */
+    --button-color: #FEFEFE; /* prata para destaque */
+  }
+  
+  /* Corpo da página */
+  body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+  }
+  
+  /* Header */
+#menuresponsivo {
+  display: none;
+}
+
+  header  {
+    display: flex;
+    background-color: #333;
+    padding: 20px;
+    
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header .logo h1 {
+    
+    color: (--text-color);  /* var(--highlight-color); */
+    font-size: 3rem;
+  
+    }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  header nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+header nav ul li a:hover {
+  color: var(--highlight-color);
+}
+
+
+
+/* Seção Home */
+#home {
+
+  background-image: url(logooriginal.jpg); /* Coloque a imagem desejada */
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  text-align: center;
+  height: 40rem;
+  width: auto;
+}
+
+#home h2 {
+  font-size: 4rem;
+  color: var(--text-color);
+}
+
+#home p {
+  font-size: 2rem;
+  margin: 20px 0;
+}
+#primeiraFrase {
+  font-size: 3rem;
+}
+
+#primeiroParagrafo {
+  font-size: 2rem;
+}
+
+.button {
+  background-color: var(--highlight-color);
+  padding: 10px 20px;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  background-color: #388E3C;
+}
+
+/* Seção Serviços */
+#servicos-destaque {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #222;
+}
+
+#servicos-destaque h2 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+.frasess {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+#servicos-destaque .service {
+  display: inline-block;
+  width: 30%;
+  height: 15rem;
+  padding: 20px;
+  background-color: #333;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+#servicos-destaque .service:hover {
+  background-color: var(--highlight-color);
+}
+
+#servicos-destaque .service h3 {
+  font-size: 3rem;
+  color: var(--text-color);
+}
+
+#servicos-destaque .service p { font-size: 1rem;
+    color: var(--text-color);
+  }
+  
+  /* Seção Depoimentos */
+  #depoimentos {
+    padding: 50px 20px;
+    background-color: #333;
+    text-align: center;
+  }
+  
+  #depoimentos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .testimonial {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+  }
+
+
+
+  
+  /* Rodapé */
+  footer {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+  }
+  
+  footer p {
+    color: var(--text-color);
+    margin-top: 20px;
+  }
+  
+  /* Formulários e Inputs */
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #444;
+    border: 1px solid #333;
+    color: var(--text-color);
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 12px 20px;
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #388E3C;
+  }
+
+
+  /* Rodapé */
+  
+/* Rodapé */
+ 
+
+   /* Estilos para o Footer */
+   .footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.footer-section {
+    margin: 20px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.social-links .social-icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-links .social-icons a {
+    font-size: 5rem;
+    color: #f1f1f1;
+    margin: 0 10px;
+    transition: color 0.3s;
+
+} 
+
+.social-links .social-icons a:hover {
+  color: #ffcc00;
+}
+
+
+.footer-bottom {
+  background-color: #222;
+  padding: 20px;
+  color: #bbb;
+  font-size: 0.9rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+
+/* Responsividade para telas pequenas */
+
+@media (max-width: 1200px) {
+    header nav ul {
+      gap: 15px; /* Ajustando o espaçamento */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* Menu */
+
+    #menuTradicional {
+      display: none;
+    }
+    
+    
+
+
+
+    #menuresponsivo {
+      display: flex;
+    }
+
+
+    nav.menuLateral {
+      
+
+      width: 2rem;
+      height: 2rem;
+      background-color: none;
+      
+      padding: 2rem  0 2rem 1%;
+      
+      
+      
+      position: fixed;
+      top: 0;
+      left : 0;
+      
+      overflow: hidden;
+      transition: 0.5s; 
+      
+    }  
+    
+    nav.menuLateral:hover {
+      width: 7rem;
+      height: 100rem; 
+      
+    } 
+      
+    .btnExpandir {
+      width: 100%;
+      padding-left: 0;
+    }
+    .btnExpandir > i {
+      color: white; 
+      font-size: 1.5rem;
+      cursor: pointer;
+      
+    }
+    ul {
+      height: 100%;
+      list-style-type: none;
+      
+    }
+    ul li.iten-menu {
+      transition: 0.5s;
+    }
+    
+    ul li.iten-menu:hover {
+      background: yellow;
+      
+      
+    }
+    ul li.iten-menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 20px 4%;
+      display: flex;
+      margin-bottom: 0.5rem;
+      line-height: 40px;
+      font-weight: bold;
+      
+    }
+    
+    ul li.iten-menu a .txt-link {
+      margin-left: 0.5rem;
+      
+    }
+    
+    ul li.iten-menu a .icon > i {
+      font-size: 1.5rem;
+      
+    }
+
+
+
+
+    
+
+    #home {
+
+        background-image: url(faviicon.png); 
+        background-size: cover;
+        background-position: center;
+        padding: 100px 20px;
+        text-align: center;
+        height: 2rem;
+        width: 100%;
+        margin-top: -1.5rem;
+      }
+
+    
+
+    #servicos-destaque .service {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+        background-color: #333;
+        margin: 10px;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s ease;
+      }
+
+#servicos-destaque h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+
+  
+#servicos-destaque .service h3 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+  }
+
+  
+
+
+    header nav ul {
+      flex-direction: column;  /* Coloca os itens do menu em coluna */
+      gap: 10px;  /* Ajusta o espaçamento entre os itens */
+      align-items: center;  /* Alinha os itens ao centro */
+    }
+  
+    /* Banner */
+    #banner {
+      height: 250px; /* Ajusta a altura do banner para telas menores */
+    }
+  
+    /* Ajustando os links do menu */
+    header nav ul li a {
+      font-size: 1.2rem; /* Tamanho da fonte ajustado */
+    }
+    
+    /* Menu Hambúrguer */
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      z-index: 99; /* Para garantir que o menu apareça sobre outros elementos */
+    }
+  
+    .hamburger .bar {
+      width: 30px;
+      height: 4px;
+
+  background-color: var(--text-color);
+    border-radius: 5px;
+  }
+
+  .menu ul {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .menu ul.active {
+    display: flex; /* Quando o menu for ativado, os itens irão aparecer */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustando o texto para telas muito pequenas */
+  body {
+    font-size: 14px; /* Tamanho de fonte menor */
+  }
+
+  header nav ul li a {
+    font-size: 1rem; /* Ajuste no tamanho dos links */
+  }
+
+  #banner {
+    height: 200px; /* Menor altura para o banner */
+  }
+
+  .menu ul li a {
+    font-size: 1rem; /* Fontes menores nos links do menu */
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-section {
+    text-align: center;
+}
+
+}
+
+
+
+
+
+  
+ 
