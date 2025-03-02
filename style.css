@@ -116,7 +116,7 @@ header nav ul li a:hover {
 }
 
 .frasess {
-  font-size: 2rem;
+  font-size: 1rem;
   margin-top: 1rem;
 }
 
@@ -137,7 +137,7 @@ header nav ul li a:hover {
 }
 
 #servicos-destaque .service h3 {
-  font-size: 3rem;
+  font-size: 2rem;
   color: var(--text-color);
 }
 
