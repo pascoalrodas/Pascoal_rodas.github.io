@@ -250,29 +250,32 @@
     <section id="contact" class="form-section" aria-label="Formulário de orçamento">
       <h2>Peça seu Orçamento</h2>
       <form id="contact-form">
-        <label for="name">Nome completo</label>
-        <input type="text" id="name" name="name" required autocomplete="name" placeholder="Seu nome" />
+  <label for="name">Nome completo</label>
+  <input type="text" id="name" name="name" required autocomplete="name" placeholder="Seu nome" />
 
-        <label for="phone">Telefone</label>
-        <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="(00) 00000-0000"
-          pattern="[0-9s-()]{10,15}" />
+  <label for="phone">Telefone</label>
+  <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="(00) 00000-0000"
+    pattern="[0-9s-()]{10,15}" />
 
-        <label for="service">Serviço desejado</label>
-        <select id="service" name="service" required>
-          <option value="" disabled selected>Selecione um serviço</option>
-          <option value="troca-de-pneus">Troca de Pneus</option>
-          <option value="alinhamento">Alinhamento</option>
-          <option value="balanceamento">Balanceamento</option>
-          <option value="recuperacao-de-rodas">Recuperação de Rodas</option>
-          <option value="troca-de-oleo">Troca de Óleo</option>
-          <option value="suspensao-freios-embreagem">Suspensão, Freios e Embreagem</option>
-        </select>
+  <label for="service">Serviço desejado</label>
+  <select id="service" name="service" required>
+    <option value="" disabled selected>Selecione um serviço</option>
+    <option value="troca-de-pneus">Troca de Pneus</option>
+    <option value="alinhamento">Alinhamento</option>
+    <option value="balanceamento">Balanceamento</option>
+    <option value="recuperacao-de-rodas">Recuperação de Rodas</option>
+    <option value="troca-de-oleo">Troca de Óleo</option>
+    <option value="suspensao-freios-embreagem">Suspensão, Freios e Embreagem</option>
+  </select>
 
-        <label for="message">Mensagem (opcional)</label>
-        <textarea id="message" name="message" placeholder="Digite alguma observação" rows="3"></textarea>
+  <label for="message">Mensagem (opcional)</label>
+  <textarea id="message" name="message" placeholder="Digite alguma observação" rows="3"></textarea>
 
-        <button type="submit" class="btn-submit">Enviar Orçamento</button>
-      </form>
+  <button type="submit" class="btn-submit">Enviar Orçamento</button>
+</form>
+
+
+
       <p id="form-status" aria-live="polite" style="margin-top: 1em;"></p>
     </section>
   </main>
@@ -370,17 +373,22 @@
     });
 
     // Formulário de orçamento: envio simulado
-    const form = document.getElementById('contact-form');
-    const formStatus = document.getElementById('form-status');
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const nome = document.getElementById('name').value.trim();
+    const telefone = document.getElementById('phone').value.trim();
+    const serviceSelect = document.getElementById('service');
+    const servico = serviceSelect.options[serviceSelect.selectedIndex].text;
+    const mensagemExtra = document.getElementById('message').value.trim();
 
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      formStatus.textContent = 'Enviando...';
-      setTimeout(() => {
-        formStatus.textContent = 'Orçamento enviado com sucesso! Entraremos em contato em breve.';
-        form.reset();
-      }, 1500);
-    });
+    let mensagem = `Nome: ${nome}\nTelefone: ${telefone}\nServiço: ${servico}`;
+    if(mensagemExtra) {
+      mensagem += `\nObservação: ${mensagemExtra}`;
+    }
+
+    const url = `https://wa.me/65992907235?text=${encodeURIComponent(mensagem)}`;
+    window.open(url, '_blank');
+  });
   </script>
 </body>
 
