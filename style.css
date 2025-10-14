@@ -260,6 +260,23 @@
   color: #e63946;
 }
 
+.social-links .social-icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-links .social-icons a {
+    font-size: 5rem;
+    color: #f1f1f1;
+    margin: 0 10px;
+    transition: color 0.3s;
+
+} 
+
+.social-links .social-icons a:hover {
+  color: #ffcc00;
+}
+
 
 
     
